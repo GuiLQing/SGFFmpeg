@@ -7,6 +7,7 @@
 //
 
 #import "SGViewController.h"
+#import "FFmpegManager.h"
 
 @interface SGViewController ()
 
@@ -18,6 +19,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [FFmpegManager.sharedManager converWithInputPath:@"/Users/lg/Desktop/Project/ZJHVideoProcessing-master/ZJHVideoProcessing/ZJHVideoProcessing/For here or to go.mpg" outputPath:@"/Users/lg/Desktop/hahaha.mp4" processBlock:^(float process) {
+        
+    } completionBlock:^(NSError *error) {
+        NSLog(@"完成了");
+    }];
 }
 
 - (void)didReceiveMemoryWarning

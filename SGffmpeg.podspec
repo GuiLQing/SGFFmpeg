@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SGffmpeg'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of SGffmpeg.'
 
 # This description is used to generate tags and improve search results.
@@ -22,21 +22,16 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/GuiLQing/SGffmpeg'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'GuiLQing' => 'gui950823@126.com' }
   s.source           = { :git => 'https://github.com/GuiLQing/SGffmpeg.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
-  s.source_files = 'SGffmpeg/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'SGffmpeg' => ['SGffmpeg/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.vendored_libraries = 'SGffmpeg/Classes/libSGffmpegLibrary.a'
+  s.source_files = 'SGffmpeg/Classes/FFmpegManager.h'
+  
+  s.frameworks = 'OpenGLES', 'AVFoundation', 'CoreGraphics', 'CoreMedia', 'CoreVideo', 'MediaPlayer', 'AudioToolbox', 'QuartzCore', 'VideoToolbox', 'CoreAudio'
+  s.libraries = 'z', 'iconv', 'bz2.1.0'
+  
 end

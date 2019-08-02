@@ -40,8 +40,8 @@
 		07B3FE58B7BB0CBA672D7754 /* Pods_SGffmpeg_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGffmpeg_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		153985564397EA5F4BBD43A3 /* Pods-SGffmpeg_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGffmpeg_Tests.release.xcconfig"; path = "Target Support Files/Pods-SGffmpeg_Tests/Pods-SGffmpeg_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1806C2E149A6781003B5C9F3 /* Pods_SGffmpeg_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGffmpeg_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		188124118C05F8B024F8B47A /* SGffmpeg.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SGffmpeg.podspec; path = ../SGffmpeg.podspec; sourceTree = "<group>"; };
-		37A7F4B0CF5C13E5C0C324A2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		188124118C05F8B024F8B47A /* SGffmpeg.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SGffmpeg.podspec; path = ../SGffmpeg.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		37A7F4B0CF5C13E5C0C324A2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SGffmpeg_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGffmpeg_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,7 +66,7 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AEFC1DC3FBE11639597C240 /* Pods-SGffmpeg_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGffmpeg_Example.debug.xcconfig"; path = "Target Support Files/Pods-SGffmpeg_Example/Pods-SGffmpeg_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D983E21E97273F28764F1F30 /* Pods-SGffmpeg_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGffmpeg_Example.release.xcconfig"; path = "Target Support Files/Pods-SGffmpeg_Example/Pods-SGffmpeg_Example.release.xcconfig"; sourceTree = "<group>"; };
-		E8CEE490D8A956D2A46A2D7D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E8CEE490D8A956D2A46A2D7D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				74BEFDD4E1B14B6B489B94D3 /* Pods-SGffmpeg_Tests.debug.xcconfig */,
 				153985564397EA5F4BBD43A3 /* Pods-SGffmpeg_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +207,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				D71DE4BF0F670DF98525B330 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +246,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = GuiLQing;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = Z35S33J39R;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +259,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -337,24 +339,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D71DE4BF0F670DF98525B330 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SGffmpeg_Example/Pods-SGffmpeg_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SGffmpeg/SGffmpeg.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SGffmpeg.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SGffmpeg_Example/Pods-SGffmpeg_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -494,8 +478,13 @@
 			baseConfigurationReference = 8AEFC1DC3FBE11639597C240 /* Pods-SGffmpeg_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z35S33J39R;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGffmpeg/SGffmpeg-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SGffmpeg/SGffmpeg.framework/Headers\"",
+				);
 				INFOPLIST_FILE = "SGffmpeg/SGffmpeg-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
@@ -510,8 +499,13 @@
 			baseConfigurationReference = D983E21E97273F28764F1F30 /* Pods-SGffmpeg_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z35S33J39R;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGffmpeg/SGffmpeg-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SGffmpeg/SGffmpeg.framework/Headers\"",
+				);
 				INFOPLIST_FILE = "SGffmpeg/SGffmpeg-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
